@@ -1,0 +1,28 @@
+<div class="banner-container"> 
+  <div class="slider">
+    <div
+      class="slider__slides"
+      [style.transform]="'translateX(' + -currentIndex * 100 + '%)'"
+    >
+      <div
+        class="slider__slides__slide"
+        *ngFor="let image of images; let i = index"
+      >
+        <img
+          class="slider__slides__image"
+          [src]="image"
+          alt="banner {{ i + 1 }}"
+        />
+      </div>
+    </div>
+  
+    <div class="slider__dots">
+      <span
+        class="slider__dots__dot"
+        *ngFor="let image of images; let i = index"
+        [class.active]="i === currentIndex"
+        (click)="setActiveIndex(i)"
+      ></span>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,51 @@
+<div class="container">
+  <div class="header">
+    <!-- <div class="header__title" (click)="openHomepage()">clusters crew 🤘</div> -->
+    <div class="header__title">
+      <img
+        (click)="openHomepage()"
+        class="header__title__logo"
+        src="assets/logo/CC-logo.png"
+        alt=""
+      />
+    </div>
+    <div class="header__menu">
+      <button
+        *ngIf="showButton"
+        class="header__menu__about-us"
+        (click)="openAboutUs()"
+      >
+        About Us
+      </button>
+
+      <div class="header__menu__dropdown">
+        <button class="header__menu__drop-btn" (click)="toggleDropdown()">
+          Contact Us
+        </button>
+        <div
+          (click)="toggleDropdown()"
+          class="header__menu__dropdown-content"
+          [ngClass]="{ header__menu__show: isDropdownOpen }"
+        >
+          <a class="header__menu__items" href="#" (click)="openInstagram()">
+            <span class="header__menu__icon-wrapper">
+              <img
+                class="header__menu__icon"
+                src="assets/icons/instagram.svg"
+              />Instagram</span
+            >
+          </a>
+          <a class="header__menu__items" href="#">
+            <span class="header__menu__icon-wrapper">
+              <img
+                class="header__menu__icon"
+                src="assets/icons/whatsapp.svg"
+              />Whatsapp</span
+            >
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <app-message-display></app-message-display>
+</div>

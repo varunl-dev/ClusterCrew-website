@@ -1,0 +1,56 @@
+.about-us {
+  height: 100%;
+  overflow-y: auto;
+  padding: 2rem 2.5rem;
+  color: #0e5e02;
+  &__heading {
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin: 0 0 2rem 0;
+    padding: 0 0 0.8rem 0;
+    border-bottom: 1px solid #0e5e02;
+  }
+  &__content {
+    margin: 0;
+    padding: 0;
+  }
+  &__title {
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin: 2rem 0;
+    padding: 0 0 0.8rem 0;
+    border-bottom: 1px solid #0e5e02;
+    &__members-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+    &__member-card {
+      width: 13rem;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      text-align: center;
+      background-color: #ffc107;
+      -webkit-box-shadow: 0 0 0.125rem 0.125rem rgba(0, 0, 0, 0.1);
+      box-shadow: 0 0 0.125rem 0.125rem rgba(0, 0, 0, 0.1);
+    }
+    &__content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    &__images {
+      width: 100%;
+      border-radius: 0.5rem;
+      -webkit-box-shadow: 0 0 0.125rem 0.125rem rgba(0, 0, 0, 0.1);
+      box-shadow: 0 0 0.125rem 0.125rem rgba(0, 0, 0, 0.1);
+    }
+    &__member-name {
+      margin: 0.5rem 0;
+    }
+    &__insta-link {
+      color: #007bff;
+      text-decoration: none;
+    }
+  }
+}

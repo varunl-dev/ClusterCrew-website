@@ -1,0 +1,36 @@
+<app-header [showButton]="false"></app-header>
+
+<div class="about-us">
+  <h2 class="about-us__heading">About Us</h2>
+  <p class="about-us__content">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat facilis
+    quidem ex repudiandae, repellendus obcaecati ad aliquid id laudantium nam
+    praesentium incidunt explicabo, consequatur quis pariatur ut consequuntur
+    enim recusandae. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    Repellat facilis quidem ex repudiandae, repellendus obcaecati ad aliquid id
+    laudantium nam praesentium incidunt explicabo, consequatur quis pariatur ut
+    consequuntur enim recusandae.
+  </p>
+  <h2 class="about-us__title">Clusters Crew Members</h2>
+  <div class="about-us__title__members-container">
+    <div
+      *ngFor="let member of sortedFriendsList"
+      class="about-us__title__member-card"
+    >
+      <img
+        class="about-us__title__images"
+        [src]="member.imageSrc"
+        alt="{{ member.name }}"
+      />
+      <div>
+        <h3 class="about-us__title__member-name">{{ member.name }}</h3>
+        <a
+          class="about-us__title__insta-link"
+          [href]="member.instagram"
+          target="_blank"
+          >Instagram</a
+        >
+      </div>
+    </div>
+  </div>
+</div>

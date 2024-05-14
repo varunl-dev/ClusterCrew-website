@@ -1,0 +1,17 @@
+<!-- <div class="message-container">
+  <marquee
+    class="message-container__marquee"
+    behavior="scroll"
+    direction="left"
+  >
+    <div class="message-container__marquee__content" #marquee></div>
+  </marquee>
+</div> -->
+
+<div class="marquee">
+  <div class="message-container">
+    <div *ngFor="let message of messages" class="message">
+      {{ message }}
+    </div>
+  </div>
+</div>

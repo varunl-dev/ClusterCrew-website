@@ -1,0 +1,1 @@
+export * from './cc-footer.component';

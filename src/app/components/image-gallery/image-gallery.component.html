@@ -1,0 +1,26 @@
+<app-header></app-header>
+<div class="img-gallery">
+  <div class="img-gallery__container">
+    <div class="img-gallery__container__wrapper">
+      <img
+        class="img-gallery__container__image"
+        [src]="mainImageSrc"
+        alt="trip-img"
+      />
+    </div>
+  </div>
+  <div class="img-gallery__button-wrapper">
+    <button
+      class="img-gallery__button-wrapper__prev-button"
+      (click)="prevBanner()"
+    >
+      Previous
+    </button>
+    <button
+      class="img-gallery__button-wrapper__next-button"
+      (click)="nextBanner()"
+    >
+      Next
+    </button>
+  </div>
+</div>
