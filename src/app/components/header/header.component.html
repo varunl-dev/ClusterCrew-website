@@ -1,6 +1,5 @@
 <div class="container">
   <div class="header">
-    <!-- <div class="header__title" (click)="openHomepage()">clusters crew 🤘</div> -->
     <div class="header__title">
       <img
         (click)="openHomepage()"
@@ -27,7 +26,7 @@
           class="header__menu__dropdown-content"
           [ngClass]="{ header__menu__show: isDropdownOpen }"
         >
-          <a class="header__menu__items" href="#" (click)="openInstagram()">
+          <a class="header__menu__items" (click)="openInstagram()">
             <span class="header__menu__icon-wrapper">
               <img
                 class="header__menu__icon"
@@ -41,6 +40,14 @@
                 class="header__menu__icon"
                 src="assets/icons/whatsapp.svg"
               />Whatsapp</span
+            >
+          </a>
+          <a class="header__menu__items" (click)="openCricHeroes()">
+            <span class="header__menu__icon-wrapper">
+              <img
+                class="header__menu__icon"
+                src="assets/icons/cricket.png"
+              />Cricheroes</span
             >
           </a>
         </div>

@@ -1,0 +1,48 @@
+.footer {
+  background-color: #ffc107;
+  color: #0e5e02;
+  padding: 10px 0;
+  font-size: 14px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  -webkit-box-shadow: 0 0 0.125rem 0.125rem rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 0.125rem 0.125rem rgba(0, 0, 0, 0.1);
+  &__container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &__image {
+      height: 3rem;
+    }
+    &__CC-logo,
+    &__contact-us {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    &__logo-wrapper {
+      border-radius: 50%;
+      border: 1px solid #0e5e02;
+      margin: 1rem;
+      width: 2rem;
+      height: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      -webkit-box-shadow: 0 0 0.125rem 0.125rem rgba(0, 0, 0, 0.1);
+      box-shadow: 0 0 0.125rem 0.125rem rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+    }
+    &__logo {
+      width: 1rem;
+    }
+    &__text {
+      color: #0e5e0274;
+      font-size: 0.8rem;
+    }
+  }
+}

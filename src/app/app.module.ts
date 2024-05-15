@@ -3,16 +3,17 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomePageComponent } from './pages';
-import { HeaderComponent } from './components';
-import { MessageDisplayComponent } from './components/message-display/message-display.component';
-import { BannerComponent } from './components/banner/banner.component';
+import { AboutUsComponent, HomePageComponent } from './pages';
+import {
+  BannerComponent,
+  CCFooterComponent,
+  HeaderComponent,
+  ImageGalleryComponent,
+  MessageDisplayComponent,
+  TripCategoriesComponent,
+} from './components';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
-import { TripCategoriesComponent } from './components/trip-categories/trip-categories.component';
-import { AboutUsComponent } from './pages/about-us/about-us.component';
-import { ImageGalleryComponent } from './components/image-gallery/image-gallery.component';
 import { CatImageService } from './services';
-import { CcFooterComponent } from './components/cc-footer/cc-footer.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,7 @@ import { CcFooterComponent } from './components/cc-footer/cc-footer.component';
     TripCategoriesComponent,
     AboutUsComponent,
     ImageGalleryComponent,
-    CcFooterComponent,
+    CCFooterComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [

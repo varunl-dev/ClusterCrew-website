@@ -7,6 +7,10 @@ import { Router } from '@angular/router';
   templateUrl: './trip-categories.component.html',
   styleUrl: './trip-categories.component.scss',
 })
+
+/**
+ * Component to show CC's trips
+ */
 export class TripCategoriesComponent {
   categories: any[] = [
     {
@@ -159,7 +163,10 @@ export class TripCategoriesComponent {
   ) {}
 
   categoryRows: any[][] = this.chunkArray(this.categories, 5);
-
+  
+  /**
+   * Fn to segregate each row have 5 trips
+   */
   chunkArray(array: any[], size: number): any[] {
     const chunkedArray = [];
     for (let i = 0; i < array.length; i += size) {
@@ -168,6 +175,10 @@ export class TripCategoriesComponent {
     return chunkedArray;
   }
 
+  /**
+   * Fn to set the selected category images in service,
+   * To navigate to image-gallery component
+   */
   selectCategoryImages(images: string[]): void {
     this.catImageService.setSelectedCategoryImages(images);
     this.router.navigate(['/image-gallery']);

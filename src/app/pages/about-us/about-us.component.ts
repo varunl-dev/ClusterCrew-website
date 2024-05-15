@@ -5,6 +5,10 @@ import { Component } from '@angular/core';
   templateUrl: './about-us.component.html',
   styleUrl: './about-us.component.scss',
 })
+
+/**
+ * Page to show about ClustersCrew and ClustersCrew members
+ */
 export class AboutUsComponent {
   friendsLists = [
     {
@@ -121,6 +125,9 @@ export class AboutUsComponent {
 
   sortedFriendsList: { name: string; instagram: string; imageSrc: string }[];
 
+  /**
+   * To sort the members name alphabetically
+   */
   constructor() {
     this.sortedFriendsList = this.friendsLists
       .slice()

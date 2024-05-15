@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { CCFooterComponent } from './cc-footer.component';
 
-import { CcFooterComponent } from './cc-footer.component';
 
 describe('CcFooterComponent', () => {
-  let component: CcFooterComponent;
-  let fixture: ComponentFixture<CcFooterComponent>;
+  let component: CCFooterComponent;
+  let fixture: ComponentFixture<CCFooterComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [CcFooterComponent]
+      declarations: [CCFooterComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(CcFooterComponent);
+    fixture = TestBed.createComponent(CCFooterComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
