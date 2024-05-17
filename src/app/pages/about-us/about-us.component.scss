@@ -1,10 +1,10 @@
 .about-us {
-  padding: 2rem 2.5rem;
+  padding: 2rem 1rem;
 
   &__heading {
     font-weight: 600;
     font-size: 1.5rem;
-    margin: 0 0 2rem 0;
+    margin: 0 0 1.5rem 0;
     padding: 0 0 0.8rem 0;
     border-bottom: 1px solid #0e5e02;
   }
@@ -15,14 +15,14 @@
   &__title {
     font-weight: 600;
     font-size: 1.5rem;
-    margin: 2rem 0;
+    margin: 2rem 0 1.5rem 0;
     padding: 0 0 0.8rem 0;
     border-bottom: 1px solid #0e5e02;
-    &__members-container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
-    }
+  }
+  &__members-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
     &__member-card {
       width: 13rem;
       padding: 1rem;
@@ -31,11 +31,6 @@
       background-color: #ffc107;
       -webkit-box-shadow: 0 0 0.125rem 0.125rem rgba(0, 0, 0, 0.1);
       box-shadow: 0 0 0.125rem 0.125rem rgba(0, 0, 0, 0.1);
-    }
-    &__content {
-      display: flex;
-      align-items: center;
-      justify-content: center;
     }
     &__images {
       width: 100%;
@@ -60,4 +55,25 @@
   overflow-x: hidden;
   overflow-y: auto;
   position: absolute;
+}
+
+/*  mobile devices */
+@media screen and (max-width: 600px) {
+  .about-us {
+    &__heading {
+      font-size: 1rem;
+      margin: 0 0 1rem 0;
+    }
+    &__content {
+      font-size: 0.8rem;
+    }
+    &__title {
+      font-size: 1rem;
+    }
+    &__members-container {
+      &__member-card {
+        width: 100%;
+      }
+    }
+  }
 }

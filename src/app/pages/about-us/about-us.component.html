@@ -13,21 +13,23 @@
       need them to read the poems.
     </p>
     <h2 class="about-us__title">Clusters Crew Members</h2>
-    <div class="about-us__title__members-container">
+    <div class="about-us__members-container">
       <div
         *ngFor="let member of sortedFriendsList"
-        class="about-us__title__member-card"
+        class="about-us__members-container__member-card"
       >
         <img
-          class="about-us__title__images"
+          class="about-us__members-container__images"
           [src]="member.imageSrc"
           alt="{{ member.name }}"
         />
         <div>
-          <h3 class="about-us__title__member-name">{{ member.name }}</h3>
+          <h3 class="about-us__members-container__member-name">
+            {{ member.name }}
+          </h3>
           <a [href]="member.instagram" target="_blank"
             ><img
-              class="about-us__title__insta-link"
+              class="about-us__members-container__insta-link"
               src="assets/icons/instagram.svg"
               alt="instagram"
           /></a>

@@ -1,15 +1,18 @@
 <div class="cat-container">
   <p class="cat-container__title">Our Trips</p>
-  <div class="cat-container__cat-row" *ngFor="let row of categoryRows">
+
+  <div class="cat-container__grid-container">
     <div
+      class="cat-container__grid-container__grid-item"
+      *ngFor="let category of categories"
       (click)="selectCategoryImages(category.tripImages)"
-      class="cat-container__cat-row__category"
-      *ngFor="let category of row"
     >
-      <img class="cat-container__cat-row__cat-img" [src]="category?.image" />
-      <div class="cat-container__cat-row__cat-name">
-        {{ category?.name }}
-      </div>
+      <img
+        class="cat-container__grid-container__image"
+        [src]="category.image"
+        alt="{{ category.name }}"
+      />
+      <div class="cat-container__grid-container__name">{{ category.name }}</div>
     </div>
   </div>
 </div>

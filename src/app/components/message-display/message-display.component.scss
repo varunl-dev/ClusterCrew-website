@@ -3,22 +3,20 @@
   white-space: nowrap;
   overflow: hidden;
   width: 100%;
-}
-
-.message-container {
-  display: inline-block;
-  animation: marquee 30s linear infinite;
-}
-
-.message {
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  margin: 0.2rem;
-  border-radius: 1rem;
-  background-color: #fdd252;
-  color: #0e5e02;
-  font-size: 1rem;
-  font-weight: 500;
+  &__message-container {
+    display: inline-block;
+    animation: marquee 30s linear infinite;
+    &__message {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      margin: 0.2rem;
+      border-radius: 1rem;
+      background-color: #fdd252;
+      color: #0e5e02;
+      font-size: 1rem;
+      font-weight: 500;
+    }
+  }
 }
 
 @keyframes marquee {
@@ -27,5 +25,18 @@
   }
   100% {
     transform: translateX(-100%);
+  }
+}
+
+/* Media query for mobile devices */
+@media only screen and (max-width: 600px) {
+  .marquee {
+    &__message-container {
+      &__message {
+        font-size: 0.7rem;
+        padding: 0.2rem 0.8rem;
+        font-weight: 500;
+      }
+    }
   }
 }

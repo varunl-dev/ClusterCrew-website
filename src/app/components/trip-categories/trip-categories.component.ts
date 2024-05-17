@@ -157,22 +157,25 @@ export class TripCategoriesComponent {
       ],
     },
   ];
+
+  rows: any[] = [];
+
   constructor(
     private catImageService: CatImageService,
     private router: Router
   ) {}
 
-  categoryRows: any[][] = this.chunkArray(this.categories, 5);
-  
+  ngOnInit(): void {
+    this.calculateRows();
+  }
+
   /**
    * Fn to segregate each row have 5 trips
    */
-  chunkArray(array: any[], size: number): any[] {
-    const chunkedArray = [];
-    for (let i = 0; i < array.length; i += size) {
-      chunkedArray.push(array.slice(i, i + size));
+  calculateRows() {
+    for (let i = 0; i < this.categories.length; i += 5) {
+      this.rows.push(this.categories.slice(i, i + 5));
     }
-    return chunkedArray;
   }
 
   /**

@@ -1,6 +1,9 @@
 <div class="marquee">
-  <div class="message-container">
-    <div *ngFor="let message of messages" class="message">
+  <div class="marquee__message-container">
+    <div
+      *ngFor="let message of messages"
+      class="marquee__message-container__message"
+    >
       {{ message }}
     </div>
   </div>

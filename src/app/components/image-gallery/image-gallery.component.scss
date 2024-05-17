@@ -1,6 +1,6 @@
 .img-gallery {
   height: 100%;
-  padding: 1rem 0 0 0;
+  padding: 1rem;
   overflow-y: auto;
   &__container {
     width: 100%;
@@ -54,6 +54,16 @@
     }
     &__next-button {
       margin: 0 0 0 1.5rem;
+    }
+  }
+}
+@media screen and (max-width: 600px) {
+  .img-gallery {
+    &__container {
+      &__wrapper {
+        max-width: 30rem;
+        max-height: 25rem;
+      }
     }
   }
 }
